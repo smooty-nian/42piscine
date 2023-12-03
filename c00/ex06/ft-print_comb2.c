@@ -1,27 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft-print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/03 14:31:33 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/03 14:36:37 by spinna           ###   ########.fr       */
+/*   Created: 2023/12/03 13:45:29 by spinna            #+#    #+#             */
+/*   Updated: 2023/12/03 14:09:51 by spinna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#includunistd.h>
 
-void ft_is_negative(int n)
+void ft_putchar(char c)
 {
-	if(n < 0)
-	{
-		write(1, "N",1);
-	}
-	else
-	{
-		write(1, "P", 1);
-	}
-
+    write(1, &c,1);
 }
 
+
+void ft_print_comb2()
+{
+    int a;
+
+    a = 0;
+
+
+    while(a <= 99)
+    {
+      ft_putchar(a + '0');
+
+      if(a != 99)
+      {
+        ft_putchar(',');
+      }  
+      a++;
+    }
+ft_putchar('\n');
+}
+
+int main(void )
+{
+    ft_print_comb2();
+    return (0);
+    
+}
