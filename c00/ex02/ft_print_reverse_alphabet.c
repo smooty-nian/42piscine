@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/30 14:40:24 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/01 11:31:27 by spinna           ###   ########.fr       */
+/*   Created: 2023/12/01 11:32:43 by spinna            #+#    #+#             */
+/*   Updated: 2023/12/01 11:40:06 by spinna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void ft_print_reverse_alphabet(void)
 {
 	char i;
-	i = 97;
+	i = 122;
 
-	while(i <= 122)
+	while(i >= 97)
 	{
 		write(1, &i, 1);
-		i++;
-	}
-}	
+		i--;
 
-	int main(void)
-	{
-		ft_print_alphabet();
-		return (0);
 	}
-	
+}
+
+int main(void)
+{
+	ft_print_reverse_alphabet();
+	return (0);
+}
