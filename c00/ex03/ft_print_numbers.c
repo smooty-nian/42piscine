@@ -6,26 +6,20 @@
 /*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:41:28 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/01 11:46:03 by spinna           ###   ########.fr       */
+/*   Updated: 2023/12/05 22:32:23 by spinna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_numbers(void)
+void	ft_print_numbers(void)
 {
-char i;
-i = 48;
+	char	i;
 
-	while(i <= 57)
+	i = 48;
+	while (i <= 57)
 	{
-		write(1, &i, 1);
+		write (1, &i, 1);
 		i++;
 	}
-}
-
-int main(void)
-{
-	ft_print_numbers();
-	return (0);
 }
