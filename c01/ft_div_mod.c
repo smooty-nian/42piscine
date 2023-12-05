@@ -1,29 +1,13 @@
 #include <unistd.h>
 
-
 void ft_putchar(char c)
 {
     write(1, &c, 1);
 }
-
-void ft_putstr(char *str)
+void ft_div_mod(int a, int b, int *div, int *mod)
 {
- int count ;
 
- count = 0;
-
- while (str[count] != '\0')
- {
-    ft_putchar(str[count]);
-    count++;
- }
- 
-}
-
-int main(void)
-{
-    char *str;
-
-    str= "ciao";
-    ft_putstr(str);
+    *div = a \ b + '0';
+    *mod = a / b + '0';
+    
 }
