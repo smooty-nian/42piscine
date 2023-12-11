@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/06 16:16:55 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/11 15:35:33 by spinna           ###   ########.fr       */
+/*   Created: 2023/12/11 12:00:21 by spinna            #+#    #+#             */
+/*   Updated: 2023/12/11 15:32:16 by spinna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-
-void	ft_div_mod(int a, int b, int *div, int *mov)
+int	ft_strlen(char *str)
 {
-	*div = a / b ;
-	*mov = a % b ;
+	int	count;
+	int	lenght;
+
+	count = 0;
+	lenght = 0;
+	while (str[count] != '\0')
+	{
+		lenght++;
+		count++;
+	}
+	return (count);
 }

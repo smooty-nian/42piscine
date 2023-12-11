@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/06 16:16:55 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/11 15:35:33 by spinna           ###   ########.fr       */
+/*   Created: 2023/12/11 15:49:19 by spinna            #+#    #+#             */
+/*   Updated: 2023/12/11 15:52:34 by spinna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mov)
+void ft_putchar(char c)
 {
-	*div = a / b ;
-	*mov = a % b ;
+	write(1, &c, 1);
+}
+
+void ft_putstr(char *str)
+{
+	int i;
+
+	i = 0;
+
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
 }

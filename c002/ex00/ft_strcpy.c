@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/06 16:16:55 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/11 15:35:33 by spinna           ###   ########.fr       */
+/*   Created: 2023/12/07 11:59:02 by spinna            #+#    #+#             */
+/*   Updated: 2023/12/11 16:16:15 by spinna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-
-void	ft_div_mod(int a, int b, int *div, int *mov)
+char	*ft_strcpy(char *dest char *src)
 {
-	*div = a / b ;
-	*mov = a % b ;
+	int	i;
+
+	i =	0;
+    while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+    	i++;
+	}
+	dest[i] = '0\';
+return dest;
 }
