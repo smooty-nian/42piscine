@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/07 11:59:02 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/11 16:16:15 by spinna           ###   ########.fr       */
+/*   Created: 2023/12/12 14:29:42 by spinna            #+#    #+#             */
+/*   Updated: 2023/12/12 14:36:54 by spinna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
-char	*ft_strcpy(char *dest, char *src)
+void	ft_putchar(char c)
 {
-	int	i;
+	write(1, &c, 1);
+}
 
-	i =	0;
-    while (src[i] != '\0')
+void	ft_putnbr(int nb)
+{
+	if(nb == -2147483648)
 	{
-		dest[i] = src[i];
-    	i++;
+		write(1, "-2147483648", 11);
+		return ;
 	}
-	dest[i] = '\0';
-return dest;
+	if(nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+	}
+	if( nb > 9)
+	{
+		ft_putnbr(nb / 10);
+
+	ft_putchar(nb % 10 + '0');
+	}
 }

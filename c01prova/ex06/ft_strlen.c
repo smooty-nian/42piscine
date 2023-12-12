@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/07 11:59:02 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/11 16:16:15 by spinna           ###   ########.fr       */
+/*   Created: 2023/12/11 12:00:21 by spinna            #+#    #+#             */
+/*   Updated: 2023/12/11 15:32:16 by spinna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_strlen(char *str)
 {
-	int	i;
+	int	count;
+	int	lenght;
 
-	i =	0;
-    while (src[i] != '\0')
+	count = 0;
+	lenght = 0;
+	while (str[count] != '\0')
 	{
-		dest[i] = src[i];
-    	i++;
+		lenght++;
+		count++;
 	}
-	dest[i] = '\0';
-return dest;
+	return (count);
 }

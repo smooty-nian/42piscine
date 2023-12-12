@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/07 11:59:02 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/11 16:16:15 by spinna           ###   ########.fr       */
+/*   Created: 2023/12/11 11:49:57 by spinna            #+#    #+#             */
+/*   Updated: 2023/12/11 11:53:53 by spinna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
+#include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+void	ft_swap(int *a, int *b)
 {
-	int	i;
+	int	sw_a;
 
-	i =	0;
-    while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-    	i++;
-	}
-	dest[i] = '\0';
-return dest;
+	sw_a = *a;
+	*a = *b;
+	*b = sw_a;
 }
