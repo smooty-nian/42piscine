@@ -6,7 +6,7 @@
 /*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 16:57:40 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/12 16:59:46 by spinna           ###   ########.fr       */
+/*   Updated: 2023/12/14 14:16:49 by spinna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int div;
-	int mod;
+	int	div;
+	int	mod;
 
 	div = *a / *b;
 	mod = *a % *b;
 	*a = div;
 	*b = mod;
-
 }

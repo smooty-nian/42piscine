@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_str_is_alppha.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/07 15:52:00 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/07 15:57:50 by spinna           ###   ########.fr       */
+/*   Created: 2023/12/14 13:41:11 by spinna            #+#    #+#             */
+/*   Updated: 2023/12/14 13:48:35 by spinna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 #include <unistd.h>
 
-
-int ft_str_is_uppercase(char *str)
+int ft_str_is_alpha(char *str)
 {
-	int i;
-	
-    i = 0;
-    while( str[i] != '\0')
+	int  i;
+
+	i = 0; 
+while (str[i] != '\0')
+{
+
+	if (str[i] <= 'a' && str[i] >= 'z' || str[i] <= 'A' && str[i] >= 'Z' )
 	{
-		if(!(str[i] >= 'A' && str[i] <= 'Z'))
-			return (0);
-	i++;
+		return 0;
 	}
-    return (1);
+	i++;
+}
+
+return (1);
+
 }

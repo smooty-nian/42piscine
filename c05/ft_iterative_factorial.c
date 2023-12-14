@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/07 15:52:00 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/07 15:57:50 by spinna           ###   ########.fr       */
+/*   Created: 2023/12/14 14:41:13 by spinna            #+#    #+#             */
+/*   Updated: 2023/12/14 14:46:35 by spinna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
+#include <stdio.h>
 
-int ft_str_is_uppercase(char *str)
+int	ft_iterative_factorial(int nb)
 {
 	int i;
+	int result;
 	
-    i = 0;
-    while( str[i] != '\0')
-	{
-		if(!(str[i] >= 'A' && str[i] <= 'Z'))
-			return (0);
-	i++;
-	}
-    return (1);
-}
+	i =0;
+	result = 0;
+	if (nb < 0)
+	return 0;
+	
+	int	result = 1;
+	 
