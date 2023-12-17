@@ -3,29 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 15:10:12 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/07 15:51:26 by spinna           ###   ########.fr       */
+/*   Updated: 2023/12/17 15:55:05 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-ft_str_is_lowercase(char *str)
+int ft_str_is_lowercase(char *str)
 {
 	int i;
-	i = 0;
 
-	while( str[i] != '0')
+	i = 0;
+	while( str[i] != '\0')
 	{
-		if (str[i] > 97 || str[i] < 122)
-        return 1
-		{
-			return (1);
+		if (str[i] >= 'a' && str[i] <= 'z')
+        {
+			i++;
 		}
-	i++;
+		else
+		{
+			return 0;
+		}
 	}
-	return (0);
+	return 1;
 }
 

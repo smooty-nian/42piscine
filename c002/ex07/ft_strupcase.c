@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_strpcase.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/07 15:00:55 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/17 15:47:22 by root             ###   ########.fr       */
+/*   Created: 2023/12/07 16:13:35 by spinna            #+#    #+#             */
+/*   Updated: 2023/12/17 16:03:44 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int  ft_str_is_numeric(char *str)
-{
-	int i;
-
-	i = 0;
-
-	while(str[i] != '\0'  )
+char	*ft_strupcase(char *str)
 	{
-		if( str[i] < '0' || str[i] > '9')
-		{
-			return 0;
-		}
+		int i;
 		
-	i++;
+		i =0 ; 
+		while( str[i] != '\0')
+		{
+			if(str[i] >= 97 && str[i] <= 122)
+			{
+				str[i] = str[i] - 32;
+			}
+		i++;
+		}	
+		return (str);
 	}
-	return 1;
-}

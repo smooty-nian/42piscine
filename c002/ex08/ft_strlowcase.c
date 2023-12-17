@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 16:35:14 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/07 16:40:19 by spinna           ###   ########.fr       */
+/*   Updated: 2023/12/17 16:07:24 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-char ft_strlowcase(char *str)
+
+char	*ft_strlowcase(char *str)
 {
-	int i;
+	int	i;
+	
 	i = 0;
-
 	while (str[i] != '\0')
 	{
 		if(str[i] >= 65 && str[i] <= 90)

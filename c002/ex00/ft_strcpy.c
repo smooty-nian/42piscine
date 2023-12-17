@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 11:59:02 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/14 14:31:34 by spinna           ###   ########.fr       */
+/*   Updated: 2023/12/17 15:15:54 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+
 
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
 	i =	0;
-    while (src[i] != '\0')
+	while	(src[i] != '\0')
 	{
 		dest[i] = src[i];
-    	i++;
+		i++;
 	}
 	dest[i] = '\0';
 return dest;

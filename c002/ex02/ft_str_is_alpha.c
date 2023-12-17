@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alppha.c                                 :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 13:41:11 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/14 13:48:35 by spinna           ###   ########.fr       */
+/*   Updated: 2023/12/17 15:42:59 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include <unistd.h>
-
+#include <stdio.h>
 int ft_str_is_alpha(char *str)
 {
 	int  i;
@@ -20,14 +20,11 @@ int ft_str_is_alpha(char *str)
 	i = 0; 
 while (str[i] != '\0')
 {
-
-	if (str[i] <= 'a' && str[i] >= 'z' || str[i] <= 'A' && str[i] >= 'Z' )
+	if (!((str[i] >= 'a' && str[i] <= 'z' )|| (str[i] >= 'A' && str[i] <= 'Z')))
 	{
 		return 0;
 	}
 	i++;
 }
-
-return (1);
-
+return 1;
 }
