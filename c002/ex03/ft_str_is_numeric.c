@@ -6,26 +6,24 @@
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 15:00:55 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/17 15:47:22 by root             ###   ########.fr       */
+/*   Updated: 2023/12/17 16:31:40 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int  ft_str_is_numeric(char *str)
+int	ft_str_is_numeric(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-
-	while(str[i] != '\0'  )
+	while (str[i] != '\0')
 	{
-		if( str[i] < '0' || str[i] > '9')
+		if (str[i] < '0' || str[i] > '9')
 		{
-			return 0;
+			return (0);
 		}
-		
-	i++;
+		i++;
 	}
-	return 1;
+	return (1);
 }

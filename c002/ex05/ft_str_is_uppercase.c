@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spinna <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 15:52:00 by spinna            #+#    #+#             */
-/*   Updated: 2023/12/07 15:57:50 by spinna           ###   ########.fr       */
+/*   Updated: 2023/12/17 16:45:43 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
 
-int ft_str_is_uppercase(char *str)
+
+int	ft_str_is_uppercase(char *str)
 {
-	int i;
-	
-    i = 0;
-    while( str[i] != '\0')
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if(!(str[i] >= 'A' && str[i] <= 'Z'))
+		if (!(str[i] >= 'A' && str[i] <= 'Z'))
 			return (0);
-	i++;
+		i++;
 	}
-    return (1);
+	return (1);
 }
